@@ -1,5 +1,5 @@
 Package: rpsql
-Title: Manuseia dados a partir R no PostgreSQL
+Title: Psql Meta Commands From R
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Jose",
@@ -7,7 +7,7 @@ Authors@R:
            role = c("aut", "cre"),
            email = "jose@consudata.com.br",
            comment = c(ORCID = "https://orcid.org/0000-0001-7415-7383"))
-Description: Manuseia dados a partir R no PostgreSQL.
+Description: Calls psql meta commands from R.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Language: pt_BR
@@ -22,7 +22,10 @@ Imports:
     dplyr,
     tidyr,
     glue,
-    tibble
-RoxygenNote: 6.1.1
+    tibble,
+    RPostgres,
+    stats,
+    DBI
+RoxygenNote: 7.1.1
 URL: https://github.com/jjesusfilho/rpsql
 BugReports: https://github.com/jjesusfilho/rpsql/issues

@@ -16,4 +16,19 @@ knitr::opts_chunk$set(
 # rpsql
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/jjesusfilho/rpsql/workflows/R-CMD-check/badge.svg)](https://github.com/jjesusfilho/rpsql/actions)
 <!-- badges: end -->
+
+Provides functions that emulate PostgreSQL psql client meta commands in R. It also provides other useful functions such as pg_pivot_wider, pg_pivot_longer, pg_collation, and pg_summary.
+
+# Instalation
+
+```r
+remotes::install_github("jjesusfilho/rpsql")
+```
+
+
+## Code of Conduct
+Please note that the 'rpsql' project is released with a
+[Contributor Code of Conduct](CODE_OF_CONDUCT.md).
+By contributing to this project, you agree to abide by its terms.
