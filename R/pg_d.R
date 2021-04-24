@@ -51,7 +51,7 @@ WHERE c.relkind IN ('r','p','v','m','S','f','')
   AND pg_catalog.pg_table_is_visible(c.oid)
 ORDER BY 1,2"
 
- DBI::dbGetQuery(conn,q)
+df <-  DBI::dbGetQuery(conn,q)
    }
 
 
@@ -96,7 +96,7 @@ and not att.attisdropped
 ", .con = conn)
 
 
- DBI::dbGetQuery(conn, q)
+ df <- DBI::dbGetQuery(conn, q)
 
    } else {
 
@@ -112,6 +112,7 @@ and not att.attisdropped
      AND   table_schema = {schema}
                       ", .con = conn)
 
+  df <- DBI::dbGetQuery(conn, q)
 
    }
 
