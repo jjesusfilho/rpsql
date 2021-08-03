@@ -4,13 +4,16 @@
 \alias{pg_dn}
 \title{Describe schemas}
 \usage{
-pg_dn(conn, schema = NULL)
+pg_dn(conn, schema = NULL, plus = FALSE)
 }
 \arguments{
 \item{conn}{Connection}
 
 \item{schema}{Optional. If you want to describe just
 one schema}
+
+\item{plus}{Logical. Defaults to FALSE, opts to TRUE with you
+want information about access privileges and description}
 }
 \value{
 data.frame with shema names and owners

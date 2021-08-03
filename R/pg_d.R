@@ -3,7 +3,6 @@
 #' @param conn Connection
 #' @param plus Additional information?
 #' @param tbl Table. If informed, describes table columns
-#' @param schema Default to public
 #'
 #' @return Table
 #' @export
@@ -12,7 +11,7 @@
 #' \dontrun{
 #' pg_d(conn)
 #' }
-pg_d <- function(conn, plus = FALSE, tbl = NULL, schema = "public"){
+pg_d <- function(conn, plus = FALSE, tbl = NULL){
 
  if (is.null(tbl)){
 
@@ -74,7 +73,7 @@ from pg_attribute att
 join pg_class tbl on tbl.oid = att.attrelid
 join pg_namespace ns on tbl.relnamespace = ns.oid
 where tbl.relname = {tbl}
-and ns.nspname = {schema}
+-- and ns.nspname = {schema}
 and not att.attisdropped
 )
 
@@ -109,7 +108,7 @@ and not att.attisdropped
           column_default as default
      FROM information_schema.columns
      WHERE table_name = {tbl}
-     AND   table_schema = {schema}
+    -- AND   table_schema = {schema}
                       ", .con = conn)
 
   df <- DBI::dbGetQuery(conn, q)

@@ -4,7 +4,7 @@
 \alias{pg_d}
 \title{List tables or table columns}
 \usage{
-pg_d(conn, plus = FALSE, tbl = NULL, schema = "public")
+pg_d(conn, plus = FALSE, tbl = NULL)
 }
 \arguments{
 \item{conn}{Connection}
@@ -12,8 +12,6 @@ pg_d(conn, plus = FALSE, tbl = NULL, schema = "public")
 \item{plus}{Additional information?}
 
 \item{tbl}{Table. If informed, describes table columns}
-
-\item{schema}{Default to public}
 }
 \value{
 Table
