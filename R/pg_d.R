@@ -73,7 +73,6 @@ from pg_attribute att
 join pg_class tbl on tbl.oid = att.attrelid
 join pg_namespace ns on tbl.relnamespace = ns.oid
 where tbl.relname = {tbl}
--- and ns.nspname = {schema}
 and not att.attisdropped
 )
 
@@ -108,7 +107,6 @@ and not att.attisdropped
           column_default as default
      FROM information_schema.columns
      WHERE table_name = {tbl}
-    -- AND   table_schema = {schema}
                       ", .con = conn)
 
   df <- DBI::dbGetQuery(conn, q)
