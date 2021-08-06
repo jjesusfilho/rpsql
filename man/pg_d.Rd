@@ -4,14 +4,14 @@
 \alias{pg_d}
 \title{List tables or table columns}
 \usage{
-pg_d(conn, plus = FALSE, tbl = NULL)
+pg_d(conn, tbl = NULL, plus = NULL)
 }
 \arguments{
 \item{conn}{Connection}
 
-\item{plus}{Additional information?}
-
 \item{tbl}{Table. If informed, describes table columns}
+
+\item{plus}{Additional information?}
 }
 \value{
 Table

@@ -1,8 +1,8 @@
 #' List tables or table columns
 #'
 #' @param conn Connection
-#' @param plus Additional information?
 #' @param tbl Table. If informed, describes table columns
+#' @param plus Additional information?
 #'
 #' @return Table
 #' @export
@@ -11,7 +11,7 @@
 #' \dontrun{
 #' pg_d(conn)
 #' }
-pg_d <- function(conn, plus = FALSE, tbl = NULL){
+pg_d <- function(conn,tbl = NULL, plus = NULL){
 
  if (is.null(tbl)){
 
@@ -115,4 +115,5 @@ and not att.attisdropped
 
  }
 
+  return(df)
  }
