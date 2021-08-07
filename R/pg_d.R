@@ -1,17 +1,17 @@
 #' List tables or table columns
 #'
 #' @param conn Connection
-#' @param tbl Table. If informed, describes table columns
+#' @param tbl Character. If informed, describes table columns
 #' @param plus Additional information?
 #'
-#' @return Table
+#' @return Tibble
 #' @export
 #'
 #' @examples
 #' \dontrun{
 #' pg_d(conn)
 #' }
-pg_d <- function(conn,tbl = NULL, plus = NULL){
+pg_d <- function(conn,tbl = NULL, plus = FALSE){
 
  if (is.null(tbl)){
 
